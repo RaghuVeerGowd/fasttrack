@@ -1,0 +1,64 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require owl.carousel
+ *= require owl.theme
+ */
+
+/*header{
+    width: 100%;
+    background: black;
+    position: fixed; 
+    top: 0;
+    height: 60px !important;
+}*/
+footer {
+    width: 100%;
+    background: black;
+    position: fixed; 
+    bottom: 0;
+    height: 30px;
+}
+#header-colors {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10px;
+    width: 100%;
+    background-image:-webkit-gradient(linear,0 50%,100% 50%,color-stop(0,#e75239),color-stop(12.5%,#e75239),color-stop(12.5%,#ff961c),color-stop(25%,#ff961c),color-stop(25%,#ffcc27),color-stop(37.5%,#ffcc27),color-stop(37.5%,#fce62f),color-stop(50%,#fce62f),color-stop(50%,#cde35b),color-stop(62.5%,#cde35b),color-stop(62.5%,#82cc33),color-stop(75%,#82cc33),color-stop(75%,#41bece),color-stop(87.5%,#41bece),color-stop(87.5%,#049cdb),color-stop(100%,#049cdb));
+    background-image:-moz-gradient(linear,0 50%,100% 50%,color-stop(0,#e75239),color-stop(12.5%,#e75239),color-stop(12.5%,#ff961c),color-stop(25%,#ff961c),color-stop(25%,#ffcc27),color-stop(37.5%,#ffcc27),color-stop(37.5%,#fce62f),color-stop(50%,#fce62f),color-stop(50%,#cde35b),color-stop(62.5%,#cde35b),color-stop(62.5%,#82cc33),color-stop(75%,#82cc33),color-stop(75%,#41bece),color-stop(87.5%,#41bece),color-stop(87.5%,#049cdb),color-stop(100%,#049cdb));
+    background-image: gradient(linear,0 50%,100% 50%,color-stop(0,#e75239),color-stop(12.5%,#e75239),color-stop(12.5%,#ff961c),color-stop(25%,#ff961c),color-stop(25%,#ffcc27),color-stop(37.5%,#ffcc27),color-stop(37.5%,#fce62f),color-stop(50%,#fce62f),color-stop(50%,#cde35b),color-stop(62.5%,#cde35b),color-stop(62.5%,#82cc33),color-stop(75%,#82cc33),color-stop(75%,#41bece),color-stop(87.5%,#41bece),color-stop(87.5%,#049cdb),color-stop(100%,#049cdb));
+     -webkit-animation: headercolors 15s linear 0s infinite;
+    animation: headercolors 15s linear 0s infinite;
+}
+
+@-webkit-keyframes headercolors {
+    from {
+        background-position:0 bottom;
+    }
+    to {
+        background-position:1600px bottom;
+    }
+}
+
+@keyframes headercolors {
+    from {
+        background-position:0 bottom;
+    }
+    to {
+        background-position:1600px bottom;
+    }
+}
+ 
+ 

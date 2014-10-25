@@ -1,0 +1,296 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<body>
+    <div id="header"></div>
+    <div id="box1">
+        <div class="logotext"> <span class="text">Example</span><span class="text2">.com</span>
+
+            <p class="untertitel">Example</p>
+        </div>
+        <div class="buttons"> <a id="infobutton" href="#puffer" style="text-decoration: none; color: #FFFFFF;">Button Example</a>
+ <a id="kontaktbutton" href="#puffer2" style="text-decoration: none; color: #FFFFFF;">Example</a>
+
+        </div>
+        <div id="puffer"></div>
+    </div>
+    <div id="box2"> <a id="navbutton" href="#box1" style="text-decoration: none; color: #FFFFFF;"><div class="dreieck"></div></a>
+
+        <div id="puffer2"></div>
+    </div>
+    <div id="box3"> <a id="navbutton" href="#box1" style="text-decoration: none; color: #FFFFFF;"><div class="dreieck"></div></a>
+
+    </div>
+    <div class="footer">
+        <div class="copyright"> <span style="margin: 0; color: #FFFFFF; float: left; margin-left: 20px; font-family: “cracked-johnnie”, sans-serif;">&copy; Example</span>
+ <span style="margin: 0; color: #F58C1F; float: left; margin-left: 10px; font-family: “Exo”, sans-serif;">2014</span>
+ <span style="margin: 0; color: #CCC; float: right; margin-right: 20px; font-family: “cracked-johnnie”, sans-serif; font-size: 25px; -moz-user-select: none; -khtml-user-select: none; cursor: default;">X</span>
+
+        </div>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript">
+    $(document).ready(function() {
+var fflag = true;
+$(window).scroll(function() {
+
+   var top = $(document).scrollTop();
+
+   if (top > 30 && fflag) {
+       fflag = false;
+       $("#header").animate({height:50}, 200);
+       $("#header").animate({opacity:0.5}, 200);
+   }
+    if (top<30 && !fflag){
+       fflag=true;
+       $("#header").animate({height:100}, 200);
+       $("#header").animate({opacity:1}, 200);   
+   }
+
+})});
+
+</script>
+<style type="text/css">
+    body {
+    background: #FFFFFF;
+    margin: 0;
+}
+@font-face {
+    font-family: “Exo”;
+    src: url(../schriften/Exo-ExtraLight.otf);
+}
+@font-face {
+    font-family: “Exo-Fat”;
+    src: url(../schriften/Exo-Bold.otf);
+}
+@font-face {
+    font-family: “cracked-johnnie”;
+    src: url(../schriften/cracked-johnnie.ttf);
+}
+#header {
+    height: 100px;
+    width: 100%;
+    background-color: #F8FCF8;
+    border-bottom: 2px black solid;
+    opacity: 1;
+    position: fixed;
+    z-index: 2;
+}
+.logo {
+    outline: none;
+}
+#logoimage {
+    margin-top: -40px;
+    top: 50%;
+    position: relative;
+    margin-left: 10px;
+}
+.footer {
+    height: 40px;
+    width: 100%;
+    background-color: gray;
+    position: relative;
+    border-top: 2px black solid;
+}
+#box1 {
+    height: 450px;
+    padding: 50px;
+    background-color: #871717;
+    position: static;
+    z-index: 1;
+}
+#box2 {
+    height: 600px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #C5D637;
+    position: static;
+    z-index: 1;
+}
+#box3 {
+    height: 600px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    background-color: #37B9D6;
+    position: static;
+    z-index: 1;
+}
+.buttons {
+    width: 450px;
+    margin-left: -225px;
+    top: 70%;
+    left: 50%;
+    position: relative;
+}
+#infobutton {
+    position: absolute;
+    background-color: #F58C1F;
+    border-radius: 5px;
+    text-align: center;
+    width: 280px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    outline: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    display: block;
+    font-family: “Exo”, sans-serif;
+    font-size: 1.4em;
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;
+}
+#kontaktbutton {
+    position: relative;
+    margin-left: 30px;
+    border: 3px #FFFFFF solid;
+    border-radius: 5px;
+    text-align: center;
+    width: 140px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    float: right;
+    cursor: pointer;
+    outline: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    display: block;
+    font-family: “Exo”, sans-serif;
+    font-size: 1.4em;
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;
+}
+#infobutton:hover {
+    background-color: #409BF9;
+    transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+}
+#kontaktbutton:hover {
+    background-color: #409BF9;
+    transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+}
+#navbutton {
+    width: 50px;
+    margin-left: -25px;
+    left: 50%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    border-left: 2px #FFFFFF solid;
+    border-right: 2px #FFFFFF solid;
+    border-bottom: 2px #FFFFFF solid;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    z-index: 0;
+    display: block;
+}
+.logotext {
+    width: 500px;
+    height: 100px;
+    text-align: center;
+    margin-left: -250px;
+    margin-top: -50px;
+    top: 40%;
+    left: 50%;
+    position: relative;
+}
+.text {
+    font-family: “cracked-johnnie”, sans-serif;
+    font-size: 5em;
+    color: #FFFFFF;
+    cursor: default;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+}
+.text2 {
+    font-family: “cracked-johnnie”, sans-serif;
+    font-size: 5em;
+    color: #F58C1F;
+    cursor: default;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+}
+.untertitel {
+    color: #FFB160;
+    font-family: “Exo”, sans-serif;
+    margin: 0;
+    font-size: 1.5em;
+    cursor: default;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+}
+.socialbox1 {
+    height: 35px;
+    width: 35px;
+    margin-right: 30px;
+    margin-top: -17.5px;
+    top: 50%;
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+.socialbox2 {
+    height: 35px;
+    width: 35px;
+    margin-right: 20px;
+    margin-top: -17.5px;
+    top: 50%;
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+.socialbox3 {
+    height: 35px;
+    width: 35px;
+    margin-right: 20px;
+    margin-top: -17.5px;
+    top: 50%;
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+.copyright {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.dreieck {
+    width: 0;
+    height: 0;
+    margin-left: 5px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #FFFFFF;
+    border-radius: 5px;
+    position: relative;
+}
+#puffer {
+    height: 50px;
+    width: 100%;
+    position: static;
+    z-index: 0;
+    margin-top: 400px;
+}
+#puffer2 {
+    height: 50px;
+    width: 100%;
+    position: static;
+    z-index: 0;
+    margin-top: 518px;
+}
+</style>

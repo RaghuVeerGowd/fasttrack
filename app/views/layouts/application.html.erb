@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CURRIES & PICKLES</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+ <div style="background-color:red ;padding-top:15px;"><header align="center"><%= link_to "ABOUT US",special_path %>
+ </br><%= link_to "HOME",root_path %></header></div> 
+<div><footer>@raghu</footer></div>    
+<%= yield %>
+<body style="background-color:black ;"> 
+
+</body>
+</html>
